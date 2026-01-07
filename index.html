@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Cek Resi | Multi Cargo Express</title>
+</head>
+<body>
+
+<h2>Multi Cargo Express</h2>
+<p>Cek Resi Pengiriman</p>
+
+<input type="text" id="resi" placeholder="Masukkan Nomor Resi">
+<br><br>
+<button onclick="cekResi()">Cek Resi</button>
+
+<div id="hasil"></div>
+
+<script>
+function cekResi() {
+  const resi = document.getElementById("resi").value;
+  const hasil = document.getElementById("hasil");
+
+  if (resi === "MCE123456") {
+    hasil.innerHTML = `
+      <h3>Status Pengiriman</h3>
+      <p>Resi: MCE123456</p>
+      <p>Status: Dalam Pengiriman</p>
+      <p>Lokasi: Jakarta</p>
+      <p>Tanggal: 6 Januari 2026</p>
+    `;
+  } else {
+    hasil.innerHTML = "<p style='color:red'>Resi tidak ditemukan</p>";
+  }
+}
+</script>
+
+</body>
+</html>
